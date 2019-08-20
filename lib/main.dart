@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_first_demo/view/first_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,9 +10,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
       ),
-      home: MyHomePage(title: 'Welcome to Flutter Demo'),
+//      home: MyHomePage(title: 'Welcome to Flutter Demo'),
+      home: FirstPage(title: 'Welcome to Flutter Demo'),
     );
   }
 }
@@ -141,9 +143,11 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () => {
               _displaySnackBar(context, '第 $_counter 个：${_suggestions[_counter].asPascalCase}'),
               _incrementCounter(),
+
               },
               tooltip: 'Increment',
-              child: Icon(Icons.warning),
+              child: Icon(Icons.warning,color: Colors.white,),
+
             ));
   }
 }
