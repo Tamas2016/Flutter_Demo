@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_first_demo/view/first_page.dart';
+import 'package:flutter_first_demo/view/second_page.dart';
+import 'package:flutter_first_demo/view/third_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +15,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
       ),
 //      home: MyHomePage(title: 'Welcome to Flutter Demo'),
-      home: FirstPage(title: 'Welcome to Flutter Demo'),
+//      home: FirstPage(title: 'Welcome to First Demo'),
+//      home: SecondPage(title: 'Welcome to Second Demo'),
+      home: ThirdPage(title: 'Welcome to Second Demo'),
     );
   }
 }
