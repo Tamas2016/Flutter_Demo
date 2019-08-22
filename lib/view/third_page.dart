@@ -10,26 +10,31 @@ class ThirdPage extends StatefulWidget {
 }
 
 class _ThirdPageState extends State<ThirdPage> {
+
+
+  bool toggle = true;
+  void _toggle() {
+    setState(() {
+      toggle = !toggle;
+    });
+  }
+
+  _getToggleChild() {
+    if (toggle) {
+      return new Text('Toggle One');
+    } else {
+      return new MaterialButton(onPressed: () {}, child: new Text('Toggle Two'));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(widget.title),
-      body: _buildGrid(),
-//      body:_buildCard,
-//      body:Container(
-//        child: new Column(
-//          children: <Widget>[
-//            new Card(
-//              child: new Column(
-//               children: <Widget>[
-//                 Text('sdd')
-//               ],
-//              ),
-//            )
-//          ],
-//        )
-//      ),
-
+//      body:_buildStack,
+      body:new Center(
+        child: _getToggleChild(),
+      ),
       floatingActionButton: _buildFloatingActionButton(),
     );
   }
@@ -77,6 +82,7 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget _buildStack = new Stack(
     alignment: const Alignment(0.6, 0.6),
     children: <Widget>[
+
       new CircleAvatar(
         backgroundImage: new AssetImage('images/gsy_cat.png'),
         radius: 100.0,
@@ -144,7 +150,7 @@ class _ThirdPageState extends State<ThirdPage> {
   Widget _buildFloatingActionButton() {
     return Builder(
         builder: (context) => FloatingActionButton(
-              onPressed: () => {},
+              onPressed: _toggle,
               tooltip: 'Increment',
               child: Icon(
                 Icons.share,
