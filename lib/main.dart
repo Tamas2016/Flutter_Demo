@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_first_demo/view/basic_widget/BasicWidgetDemo.dart';
 import 'package:flutter_first_demo/view/first_page.dart';
 import 'package:flutter_first_demo/view/second_page.dart';
 import 'package:flutter_first_demo/view/third_page.dart';
@@ -18,10 +19,10 @@ class MyApp extends StatelessWidget {
 
       home: HomePage(),
       routes: {
-        'basic_widgets':(context)=>BasicWidgetDemo(),
-        'list_view':(context)=>BasicWidgetDemo(),
-        'grid_view':(context)=>BasicWidgetDemo(),
-        'custom_icons':(context)=>BasicWidgetDemo(),
+        'basic_widgets':(context)=>BasicWidgetsDemo(),
+        'list_view':(context)=>BasicWidgetsDemo(),
+        'grid_view':(context)=>BasicWidgetsDemo(),
+        'custom_icons':(context)=>BasicWidgetsDemo(),
       },
     );
   }
@@ -147,7 +148,7 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            );
           }),
     );
   }
