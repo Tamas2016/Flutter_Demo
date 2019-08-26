@@ -10,7 +10,40 @@ class PetCard extends StatelessWidget{
   }) : super(key: key);
 
 
-
+ Widget renderCover() {
+   return Stack(
+    fit: StackFit.passthrough,
+     children: <Widget>[
+       ClipRRect(
+         borderRadius: BorderRadius.only(
+           topLeft: Radius.circular(8),
+           topRight: Radius.circular(8),
+         ),
+         child: Image.network(
+           data.coverUrl,
+           height: 200,
+           fit: BoxFit.fitWidth,
+         ),
+       ),
+       Positioned(
+           left: 0,
+           top: 100,
+           right: 0,
+           bottom: 0,
+           child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                Color.fromARGB(0, 0, 0, 0),
+                Color.fromARGB(80, 0, 0, 0),
+              ])
+            ),
+       ))
+     ],
+   );
+ }
 
 
   @override
@@ -31,11 +64,13 @@ class PetCard extends StatelessWidget{
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text('sdadsad')
+        this.renderCover(),
         ],
       ),
     );
   }
+
+
 
 }
 

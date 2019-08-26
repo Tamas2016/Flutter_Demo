@@ -6,7 +6,10 @@ class DemoTabViewModel{
   final String title;
   final Widget widget;
 
-  DemoTabViewModel({this.title, this.widget});
+  const DemoTabViewModel({
+    this.title,
+    this.widget,
+  });
 
 }
 
@@ -30,11 +33,16 @@ class DemoTabs extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         title: Text(this.title),
-        bottom: TabBar(tabs: this.demos.map((item)=>Tab(text: item.title,)).toList()),
+        bottom: TabBar(
+          controller: this.tabController,
+          isScrollable: this.tabScrollable,
+          tabs: this.demos.map((item) => Tab(text: item.title)).toList(),
+        ),
       ),
       body: TabBarView(
-          controller: this.tabController,
-          children: this.demos.map((item)=> item.widget).toList()),
+    controller: this.tabController,
+    children: this.demos.map((item) => item.widget).toList(),
+    )
     );
   }
 

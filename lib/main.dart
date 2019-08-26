@@ -1,9 +1,10 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_first_demo/view/basic_widget/BasicWidgetDemo.dart';
 import 'package:flutter_first_demo/view/first_page.dart';
 import 'package:flutter_first_demo/view/second_page.dart';
 import 'package:flutter_first_demo/view/third_page.dart';
+
+import 'view/basic_widget/index.dart';
 
 void main() => runApp(MyApp());
 
