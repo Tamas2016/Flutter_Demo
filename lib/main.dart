@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
       ),
-
       home: HomePage(),
       routes: {
         'basic_widgets':(context)=>BasicWidgetsDemo(),
@@ -107,8 +106,11 @@ class HomePage extends StatelessWidget {
         itemCount: DEMOS.length,
           padding: EdgeInsets.all(16),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          //横轴数量 这里的横轴就是x轴
               crossAxisCount:2,
-            crossAxisSpacing: 16.0,
+            //横轴间隔
+            crossAxisSpacing: 6.0,
+            //主轴间隔
             mainAxisSpacing: 16.0,
             childAspectRatio: 1.0
           ),
