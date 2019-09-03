@@ -10,8 +10,10 @@ class PetCard extends StatelessWidget {
 
   Widget renderCover() {
     return Stack(
+      //不改变子组件约束条件。
       fit: StackFit.passthrough,
       children: <Widget>[
+        //剪裁为圆角矩形
         ClipRRect(
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(8),
@@ -48,6 +50,7 @@ class PetCard extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
+        //将主轴空白位置进行均分，排列子元素，首尾子控件距边缘没有间隙
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Row(
@@ -209,6 +212,7 @@ class PetCard extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8),
+          //卡片阴影
           boxShadow: [
             BoxShadow(
               blurRadius: 6,

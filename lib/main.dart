@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_first_demo/view/first_page.dart';
+import 'package:flutter_first_demo/view/list_view/index.dart';
 import 'package:flutter_first_demo/view/second_page.dart';
 import 'package:flutter_first_demo/view/third_page.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: {
         'basic_widgets':(context)=>BasicWidgetsDemo(),
-        'list_view':(context)=>BasicWidgetsDemo(),
+        'list_view':(context)=>ListViewDemo(),
         'grid_view':(context)=>BasicWidgetsDemo(),
         'custom_icons':(context)=>BasicWidgetsDemo(),
       },
@@ -105,6 +106,7 @@ class HomePage extends StatelessWidget {
       body: GridView.builder(
         itemCount: DEMOS.length,
           padding: EdgeInsets.all(16),
+          //控制子widget layout的委托
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           //横轴数量 这里的横轴就是x轴
               crossAxisCount:2,
@@ -112,6 +114,7 @@ class HomePage extends StatelessWidget {
             crossAxisSpacing: 6.0,
             //主轴间隔
             mainAxisSpacing: 16.0,
+              //宽高比为1时，子widget
             childAspectRatio: 1.0
           ),
           itemBuilder: (context,index){
@@ -135,8 +138,8 @@ class HomePage extends StatelessWidget {
                         color: Colors.white
                       ),
                     ),
-                  )
-                  ,Expanded(
+                  ),
+                  Expanded(
                     flex: 1,
                     child: Text(
                       DEMOS[index].description,

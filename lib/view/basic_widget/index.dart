@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_first_demo/common/demo_tabs.dart';
 import 'package:flutter_first_demo/view/basic_widget/pet_card.dart';
 
+import 'CreditCard.dart';
+import 'friend_circle.dart';
 import 'mock_data.dart';
 
 List<DemoTabViewModel> demos = [
   DemoTabViewModel(title: '宠物卡片',widget: PetCard(data: petCardData)),
-  DemoTabViewModel(title: '银行卡',widget: PetCard(data: petCardData)),
-  DemoTabViewModel(title: '微信朋友圈',widget: PetCard(data: petCardData)),
+  DemoTabViewModel(title: '银行卡',widget: CreditCard(data: creditCardData)),
+  DemoTabViewModel(title: '微信朋友圈',widget: FriendCircle(data: friendCircleData)),
 ].map((item)=>DemoTabViewModel(
     title: item.title,
     widget: Column(
