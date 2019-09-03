@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SubscribeAccountCard extends StatelessWidget {
@@ -9,11 +8,9 @@ class SubscribeAccountCard extends StatelessWidget {
     this.data,
   }) : super(key: key);
 
-
-
-  Widget renderAccountInfo(){
+  Widget renderAccountInfo() {
     return Padding(
-        padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -47,17 +44,16 @@ class SubscribeAccountCard extends StatelessWidget {
     );
   }
 
-
   Widget renderCover() {
-
     final article = this.data.articles[0];
-    final shouldClip = this.data.articles.length<=1;
-
+    final shouldClip = this.data.articles.length <= 1;
     return ClipRRect(
-      borderRadius: !shouldClip?BorderRadius.circular(0):BorderRadius.only(
-        bottomLeft: Radius.circular(8),
-        bottomRight: Radius.circular(8),
-      ),
+      borderRadius: !shouldClip
+          ? BorderRadius.circular(0)
+          : BorderRadius.only(
+              bottomLeft: Radius.circular(8),
+              bottomRight: Radius.circular(8),
+            ),
       child: Stack(
         fit: StackFit.passthrough,
         children: <Widget>[
@@ -66,32 +62,84 @@ class SubscribeAccountCard extends StatelessWidget {
             height: 150,
             fit: BoxFit.cover,
           ),
-          Positioned(child: Container(
-            padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
-            alignment: Alignment.bottomLeft,
-            decoration:BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.transparent,Colors.black54],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: 100,
+            child: Container(
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
+              alignment: Alignment.bottomLeft,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.transparent, Colors.black54],
+                ),
+              ),
+              child: Text(
+                article.title,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white,
+                ),
               ),
             ),
-            child: Text(
-              article.title,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-                color: Colors.white,
-              ),
-            ),
-
-          ))
+          ),
         ],
       ),
     );
   }
 
+  Widget renderArticles() {
+    final articles = this.data.articles.sublist(1);
+    return ListView.separated(
+        //该属性表示是否根据子组件的总长度来设置ListView的长度，默认值为false
+        shrinkWrap: true,
+        itemCount: articles.length,
+        physics: NeverScrollableScrollPhysics(),
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.all(15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Expanded(
+                  child: Text(
+                    articles[index].title,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xFF333333),
+                    ),
+                  ),
+                ),
+                Padding(padding: EdgeInsets.all(10)),
+                Image.network(
+                  articles[index].coverImgUrl,
+                  width: 50,
+                  height: 50,
+                  fit: BoxFit.cover,
+                ),
+              ],
+            ),
+          );
+        },
+        //分割线
+        separatorBuilder: (context, index) {
+          return Container(
+            height: 0.5,
+            margin: EdgeInsets.symmetric(horizontal: 15),
+            color: Color(0xFFDDDDDD),
+          );
+        });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,11 +154,11 @@ class SubscribeAccountCard extends StatelessWidget {
         children: <Widget>[
           this.renderAccountInfo(),
           this.renderCover(),
+          this.renderArticles(),
         ],
       ),
     );
   }
-
 }
 
 class SubscribeAccountViewModel {
