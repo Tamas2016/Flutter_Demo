@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first_demo/common/demo_tabs.dart';
+import 'package:flutter_first_demo/view/list_view/pull_up_load_more_usage.dart';
 
 import 'builder_usage.dart';
 import 'normal_usage.dart';
+import 'pull_down_refresh_usage.dart';
+import 'separated_usage.dart';
 
 const List<DemoTabViewModel> demos = [
   DemoTabViewModel(title: '普通用法', widget: NormalList()),
   DemoTabViewModel(title: 'builder用法', widget: SubscribeAccountList()),
-  DemoTabViewModel(title: 'separated用法', widget: NormalList()),
-  DemoTabViewModel(title: '下拉刷新用法', widget: NormalList()),
-  DemoTabViewModel(title: '上拉加载用法', widget: NormalList()),
+  DemoTabViewModel(title: 'separated用法', widget: FriendList()),
+  DemoTabViewModel(title: '下拉刷新用法', widget: PullDownRefreshList()),
+  DemoTabViewModel(title: '上拉加载用法', widget: PullUpLoadMoreList()),
 ];
 
 

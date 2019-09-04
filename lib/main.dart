@@ -1,6 +1,7 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_first_demo/view/first_page.dart';
+import 'package:flutter_first_demo/view/grid_view/index.dart';
 import 'package:flutter_first_demo/view/list_view/index.dart';
 import 'package:flutter_first_demo/view/second_page.dart';
 import 'package:flutter_first_demo/view/third_page.dart';
@@ -16,13 +17,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
+        primarySwatch: Colors.blue,
       ),
       home: HomePage(),
       routes: {
         'basic_widgets':(context)=>BasicWidgetsDemo(),
         'list_view':(context)=>ListViewDemo(),
-        'grid_view':(context)=>BasicWidgetsDemo(),
+        'grid_view':(context)=>GridViewDemo(),
         'custom_icons':(context)=>BasicWidgetsDemo(),
       },
     );
