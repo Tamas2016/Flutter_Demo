@@ -67,6 +67,9 @@ flutter:
   - family: IconFont
     fonts:
     - asset: assets/fonts/IconFont.ttf
+  - family: AntdIcons
+    fonts:
+    - asset: assets/fonts/AntdIcons.ttf
 #  - family: AntdIcons
 #    fonts:
 #    - asset: assets/fonts/AntdIcons.ttf

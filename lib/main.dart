@@ -6,6 +6,7 @@ import 'package:flutter_first_demo/view/list_view/index.dart';
 import 'package:flutter_first_demo/view/second_page.dart';
 import 'package:flutter_first_demo/view/third_page.dart';
 
+import 'custom_icon/index.dart';
 import 'view/basic_widget/index.dart';
 
 void main() => runApp(MyApp());
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         'basic_widgets':(context)=>BasicWidgetsDemo(),
         'list_view':(context)=>ListViewDemo(),
         'grid_view':(context)=>GridViewDemo(),
-        'custom_icons':(context)=>BasicWidgetsDemo(),
+        'custom_icons':(context)=>CustomIconsDemo(),
+        'sliver_widgets': (context) => GridViewDemo()
       },
     );
   }
