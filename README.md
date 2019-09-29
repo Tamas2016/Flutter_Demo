@@ -10,9 +10,7 @@ Flutter 练手的项目，简单写了学习文档
 ## Getting Started
 
 ![信用卡](https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/basic_widget/screen_shots/credit_card.png)
-![信用卡](https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/basic_widget/screen_shots/credit_card.png)
-![信用卡](https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/basic_widget/screen_shots/credit_card.png)
-![信用卡](https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/basic_widget/screen_shots/credit_card.png)
+
 
 A few resources to get you started if this is your first Flutter project:
 
