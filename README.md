@@ -1,6 +1,11 @@
 # flutter_first_demo
 
-A new Flutter application.
+Flutter 练手的项目，简单写了学习文档
+
+
+## 文章
+
+[Flutter 技术文档总结问题](https://www.jianshu.com/p/63f335af18fe)
 
 ## Getting Started
 
