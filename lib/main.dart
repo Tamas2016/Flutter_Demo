@@ -4,7 +4,7 @@ import 'package:flutter_first_demo/view/first_page.dart';
 import 'package:flutter_first_demo/view/grid_view/index.dart';
 import 'package:flutter_first_demo/view/list_view/index.dart';
 import 'package:flutter_first_demo/view/second_page.dart';
-import 'package:flutter_first_demo/view/third_page.dart';
+import 'package:flutter_first_demo/view/theme/index.dart';
 
 import 'custom_icon/index.dart';
 import 'sliver_widgets/index.dart';
@@ -27,7 +27,8 @@ class MyApp extends StatelessWidget {
         'list_view':(context)=>ListViewDemo(),
         'grid_view':(context)=>GridViewDemo(),
         'custom_icons':(context)=>CustomIconsDemo(),
-        'sliver_widgets': (context) => SliverWidgetsDemo()
+        'sliver_widgets': (context) => SliverWidgetsDemo(),
+        'theme_colors': (context) => ThemeWidgetsDemo()
       },
     );
   }
@@ -47,6 +48,9 @@ const List<Color> COLORS = [
   Color(0xFFDD7160),
   Color(0xFF5D513C),
   Color(0xFFD180D2),
+  Color(0xFFD17180),
+  Color(0xFFa6513C),
+  Color(0xFFD38112),
 ];
 
 
@@ -78,6 +82,12 @@ const DEMOS = [
     description: '自定义高级滚动组件，float、snap、pinned效果任你组合',
     routeName: 'sliver_widgets',
   ),
+  Demo(
+    title: 'Theme切换主题',
+    description: 'Theme组件可以为Material APP定义主题数据',
+    routeName: 'theme_colors',
+  ),
+
 ];
 
 
