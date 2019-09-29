@@ -17,10 +17,10 @@ Flutter 技术文档总结问题
   <img width="24%"
        src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/list_view/screen_shots/pull_down_refresh_usage.gif"/>
   <img width="24%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/list_view/screen_shots/pull_up_load_more_usage.gif"/>
-  <img width="22%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/grid_view/screen_shots/color_grids.png"/>
-  <img width="22%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/grid_view/screen_shots/programme_list.png"/>
-    <img width="22%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/sliver_widgets/screen_shots/sliverAppBar-float.gif"/>
-      <img width="22%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/sliver_widgets/screen_shots/sticky-tabBar.gif"/>
-  <img width="22%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/sliver_widgets/screen_shots/custom-sliver-header.gif"/>
+  <img width="24%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/grid_view/screen_shots/color_grids.png"/>
+  <img width="24%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/view/grid_view/screen_shots/programme_list.png"/>
+    <img width="24%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/sliver_widgets/screen_shots/sliverAppBar-float.gif"/>
+      <img width="24%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/sliver_widgets/screen_shots/sticky-tabBar.gif"/>
+  <img width="24%" src="https://github.com/Tamas2016/Flutter_Demo/blob/master/lib/sliver_widgets/screen_shots/custom-sliver-header.gif"/>
 </div>
 
